@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Startup.DatabaseCtrl">
+   <children>
+      <HBox spacing="5.0">
+         <children>
+            <TextField fx:id="tbSeries" promptText="Insert BS.to Link Extension" HBox.hgrow="ALWAYS" onAction="#onEnter" />
+            <Button fx:id="btAddSeries" mnemonicParsing="false" onAction="#btAddClick" text="Add" HBox.hgrow="ALWAYS" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="hboxMain" spacing="10.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ListView fx:id="lbSeries" onMouseClicked="#lvClicked" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox spacing="5.0">
+         <children>
+            <Button fx:id="btRefresh" mnemonicParsing="false" onAction="#btRefreshClick" text="Refresh" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btDelete" mnemonicParsing="false" onAction="#btDeleteClick" text="Delete" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="btSave" mnemonicParsing="false" onAction="#btSaveClick" text="Save" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
